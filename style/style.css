@@ -1,0 +1,339 @@
+
+:root {
+  --bs-gradient: linear-gradient(to bottom, #8E54E9, #4776E6);
+}
+
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li a{
+color: white;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+}
+
+
+.carousel-item{
+  height: 100vh;
+  min-height: 300px;
+}
+
+.carousel-caption{
+  bottom: 140px;
+  z-index: 2;
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav-links,
+  .auth-buttons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.active,
+  .auth-buttons.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+  }
+}
+.navbar-transparent {
+  background-color: transparent; /* Remove the !important */
+  width: 100%;
+  z-index: 10;
+}
+
+.gradient-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to top, #e4e5e6, #00416a);
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease-in-out infinite;
+  width: 100%;
+ 
+  position: relative;
+}
+
+/* .gradient-wrapper:nth-child(2) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #e4e5e6, #00416a);
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease-in-out infinite;
+  width: 100%;
+  position: relative;
+} */
+
+#scrollTopBtn {
+  display: none; /* Sembunyikan dulu */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #007BFF; /* Warna biru untuk tampilan yang lebih menarik */
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50px; /* Button bulat */
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Shadow untuk menonjolkan tombol */
+  transition: background-color 0.3s ease; /* Efek transisi */
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  color: white;
+  width: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: semi-transparent background for contrast */
+}
+
+
+@keyframes gradientMove {
+  0% {
+    background-position: 50% 0%; /* Start at the top */
+  }
+  50% {
+    background-position: 50% 100%; /* Middle (moving down) */
+  }
+  100% {
+    background-position: 50% 0%; /* Return to top */
+  }
+}
+
+.bg-gradient {
+  background-image: var(--bs-gradient) !important;
+  background-size: cover;
+}
+
+.card{
+  cursor: pointer;
+}
+
+.carousel {
+  cursor: pointer;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  color: #0e2f51;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.hero-image img {
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Card */
+.category-title {
+  color: #4A148C;
+}
+.category-subtitle {
+  color: #FFB300;
+}
+.btn-custom {
+  background-color: #FFB300;
+  color: white;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.card-text {
+  font-size: 0.875rem;
+  color: #757575;
+}
+.card-footer {
+  background-color: white;
+  border-top: none;
+}
+.text-red {
+  color: #D32F2F;
+}
+
+footer {
+  background-color: #16222a;
+  color: #fff;
+  padding: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  max-width: 33%;
+}
+
+.footer-logo img {
+  width: 80px;
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+/* Footer */
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* add this to include padding and border in the width calculation */
+}
+
+
+.footer-box{
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-box h2{
+  font-size: 22px;
+  font-weight: 500px;
+}
+
+.footer-box p{
+  font-size: 13px;
+  font-weight: 20px;
+}
+
+.social{
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.social .bx{
+  padding: 10px;
+  background: black;
+  color: yellow;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.social .bx:hover{
+
+  color: aqua;
+  background: yellow;
+  transition: 0.2s all linear;
+}
+#btn:hover{
+  opacity: 50%;
+  transition: 0.3s;
+}
+.nav-item:hover{
+  background-color: #0E2F51;
+  padding: 0.3rem;
+  transition: 0.5s;
+}
+.nav-item:hover h5{
+  color: white;
+}
+.dropdown-item{
+  font-weight: bold;
+}
+.dropdown-item:hover{
+  background-color: #0E2F51;
+  color: white;
+}
+.side-item{
+  color: white;
+  font-weight: bold;
+
+}
+.side-item:hover{
+  background-color: white;
+  padding: 0.3rem;
+  transition: 0.5s;
+}
+.side-item:hover a{
+  color: black;
+}
+.btn-side{
+  margin-top: 40vh;;
+}
+
+
+

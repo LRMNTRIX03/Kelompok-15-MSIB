@@ -1,0 +1,274 @@
+<!--
+Kelompok 15 Website RPLearn.
+1.Sagita Masayu Kirana (11680192)
+2.Lutfi Rizaldi Mahida (10095609)
+3.Fajar Mahayoga (10254916)
+4.Ditta Adelia (11968377)
+5.Bryan Agung Pratama (10642160)
+6.Alma Alifya Zafira (11615740)
+7.Wahyu Mulia Maharani (10698890)
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPLearn - Project-based Learning</title>
+    <link rel="stylesheet" href="style/about.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <img
+            src="./Assets/logorpl.222-removebg-preview.png"
+            width="50"
+            height="50"
+            alt="Logo"
+          />
+        </a>
+        <H3 class="mt-2 mx-2">RPLearn</H3>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll d-flex justify-content-center align-items-center" style="--bs-scroll-height: 100px; font-size: 14px; font-weight: 460;">
+            <li class="nav-item dropdown rounded">
+              <a class="nav-link dropdown-toggle text-black px-3 d-flex flex-row align-items-center mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <h5>Program</h5>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/kategori_front.html">Front-End</a></li>
+                <li><a class="dropdown-item" href="/kategori_back.html">Back-End</a></li>
+                <li><a class="dropdown-item" href="#fullstack">Full-Stack</a></li>
+              </ul>
+            </li>
+            <li class="nav-item rounded">
+              <a class="nav-link text-black" href="/detail.html"><h5 class="mt-2">Kegiatanku</h5></a>
+            </li>
+            <li class="nav-item roundeds">
+              <a class="nav-link text-black" href="/about.html"><h5 class="mt-2">Tentang Kami</h5></a>
+            </li>
+          </ul>
+          <div>
+            <a type="button" href="login.html" class="btn rounded px-4" style="color: #0E2F51; border-color: #0E2F51;" id="btn">Login</a>
+            <a type="button" href="register.html" class="btn text-white custom-btn rounded px-4" style="background-color: #0E2F51;" id="btn">Daftar</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+</header>
+<!-- Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+    <div class="offcanvas-header" style="background-color: #0E2F51;">
+      <h5 class="offcanvas-title text-white" id="sidebarLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="background-color: white;"></button>
+    </div>
+    <div class="offcanvas-body" style="background-color: #0E2F51;">
+      <ul class="navbar-nav">
+        <li class="logo mb-3">
+          <img src="./Assets/logorpl.222-removebg-preview.png" alt="Logo" class="img-fluid" width="50px" height="50px">
+        </li>
+        <li class="side-item dropdown rounded">
+          <a class="nav-link dropdown-toggle text-white d-flex flex-row align-items-center mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <p>Program</p>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/materi.html">Materi</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="side-item">
+          <a class="nav-link text-white" href="/detail.html">Kegiatanku</a>
+        </li>
+        <li class="side-item">
+          <a class="nav-link text-white" href="/about.html">Tentang Kami</a>
+        </li>
+        <li class="btn-side">
+          <button class="btn btn-primary w-100 my-2" id="btn-login-s">Login</button>
+          <button class="btn btn-secondary w-100" id="btn-regis-s">Daftar</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+<!-- End Sidebar -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-container1">
+            <p class="hero-title">Tentang RPLearn</p>
+            <h1 class="hero-subtitle">Apa sih RpLearn itu?</h1>
+            <img src="/Assets/logorpl.222-removebg-preview.png" alt="Logo RPLearn" class="hero-logo">
+        </div>
+        <div class="hero-container2">
+            <p class="hero-desc">
+                RpLearn adalah sebuah platform pendidikan yang membantu Anda menguasai keterampilan pemrograman melalui
+                pengalaman langsung. Di RPLearn, kami percaya bahwa pembelajaran yang paling efektif datang dari praktik nyata, 
+                di mana pengguna dapat belajar, mengembangkan, dan menerapkan ilmu pemrograman dengan menyelesaikan proyek-proyek 
+                yang sesuai dengan kebutuhan industri.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="vm-container">
+    <div class="vm-content">
+        <div class="vm-container1">
+            <h4>Visi RPLearn</h4>
+            <p>Membangun Generasi Teknologi masa Depan Melalui Pembelajaran Proyek Nyata</p>
+        </div>
+        <div class="vm-container2">
+            <h4>Misi RPLearn</h4>
+            <p>Misi Kami adalah menjembatani kesenjangan antara pendidikan formal dan dunia Industri dengan
+                menawarkan pembelajaran  berbasis proyek yang memungkinkan siswa untuk mengasah keterampilan mereka dalam lingkungan nyata
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<section class="should-container">
+    <div class="should-content">
+        <h1>Kenapa Harus Memilih RPLearn?</h1>
+        <div class="should-card">
+            <img src="/Assets/1..jpg" alt="" class="should-img">
+            <div class="should-overlay">
+                <h3>Pembelajaran Berbasis Proyek</h3>
+            <p>Menerpakan metode pembelajaran berbasis proyek yang memungkinkan anda untuk mempelajari keterampilan baru dengan langsung terjun ke proyek nyata.</p>
+            </div>
+            
+        </div>
+        <div class="should-card">
+            <img src="/Assets/logorpl.222-removebg-preview.png" alt="" class="should-img">
+            <div class="should-overlay">
+                <h3>Membangun Portofolio Nyata</h3>
+            <p>Setiap proyek yang diselesaikan di RPLearn dapat diintegrasikan ke dalam portofolio digital pengguna yang dapat digunakan untuk melamar pekerjaan dan mengembangkan karir</p>
+            </div>
+            
+        </div>
+        <div class="should-card">
+            <img src="/Assets/logorpl.222-removebg-preview.png" alt="" class="should-img">
+            <div class="should-overlay">
+                <h3>Materi yang selalu Terupdate</h3>
+            <p>Di RPLearn, Anda selalu mendapatkan akses ke pembelajaran dan proyek yang mengikuti perkembangan teknologi terbaru dari bahasa pemrograman yang populer hingga framework yang digunakan di Industri</p>
+            </div>
+        </div>
+</section>
+
+<section class="tim-container">
+    <h1 class="tim-title">Tim Kami</h1>
+    <div class="tim-content">
+        <div class="tim-card-ganjil">
+            <img src="/Assets/1..jpg" alt="" class="tim-img">
+            <div class="tim-overlay">
+                <h3>Lutfi Rizaldi Mahida</h3>
+                <p>Full-Stack Developer</p>
+                <a href="#">Lihat Detail</a>
+            </div>
+        </div> 
+
+        <div class="tim-card-genap">
+            <img src="/Assets/1..jpg" alt="" class="tim-img">
+            <div class="tim-overlay">
+                <h3>Lutfi Rizaldi Mahida</h3>
+                <p>Full-Stack Developer</p>
+                <a href="#">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="tim-card-ganjil">
+            <img src="/Assets/1..jpg" alt="" class="tim-img">
+            <div class="tim-overlay">
+                <h3>Lutfi Rizaldi Mahida</h3>
+                <p>Full-Stack Developer</p>
+                <a href="#">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="tim-card-genap">
+            <img src="/Assets/1..jpg" alt="" class="tim-img">
+            <div class="tim-overlay">
+                <h3>Lutfi Rizaldi Mahida</h3>
+                <p>Full-Stack Developer</p>
+                <a href="#">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="tim-card-ganjil">
+            <img src="/Assets/1..jpg" alt="" class="tim-img">
+            <div class="tim-overlay">
+                <h3>Lutfi Rizaldi Mahida</h3>
+                <p>Full-Stack Developer</p>
+                <a href="#">Lihat Detail</a>
+            </div>
+        </div>
+        <div class="tim-card-genap">
+            <img src="/Assets/1..jpg" alt="" class="tim-img">
+            <div class="tim-overlay">
+                <h3>Lutfi Rizaldi Mahida</h3>
+                <p>Full-Stack Developer</p>
+                <a href="#">Lihat Detail</a>
+            </div>
+        </div>
+        <div class="tim-card-ganjil">
+            <img src="/Assets/1..jpg" alt="" class="tim-img">
+            <div class="tim-overlay">
+                <h3>Lutfi Rizaldi Mahida</h3>
+                <p>Full-Stack Developer</p>
+                <a href="#">Lihat Detail</a>
+            </div>
+        </div>
+    </div> 
+</section>
+<section class="join-container">
+    <div class="join-content">
+        <h1 >Bergabunglah Bersama Kami!</h1>
+        <p >Apakah Anda ingin memulai karier di dunia teknologi, atau memperdalam keterampilan yang sudah Anda miliki Di RPLearn, kami siap
+            mendukung Anda di setiap langkah perjalanan. Bergabunglah dengan komunitas pembelajar yang bersemangat, mentor yang berdedikasi, dan proyek yang
+            menantang untuk meraih masa depan karier yang cemerlang.
+        </p>
+        
+</section>
+
+  
+
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="/Assets/logorpl.222-removebg-preview.png" alt="RPLearn Logo">
+        </div>
+        <div class="footer-contact">
+            <h3>Kontak</h3>
+            <p>Email: <a style="text-decoration: none; color:#F4F4F5;" href="mailto:rplearn@umsida.ac.id">RPlearn@umsida.ac.id</a></p>
+            <p>Jl. Raya Gelam No.250, Pagerwaja, Gelam<br>
+            Kec. Candi, Kabupaten Sidoarjo, Jawa Timur 61271</p>
+            <p>Phone: +62 851-7520 2106</p>
+        </div>
+        <div class="footer-follow">
+            <h3>Follow</h3>
+            <div class="social-icons">
+                <a href="https://instagram.com"><img src="Assets/Instagram.png" alt="Instagram" class="social-logo">Instagram</a>
+                <a href="https://youtube.com"><img src="/Assets/google.png" alt="YouTube" class="social-logo"> YouTube</a>
+                <a href="https://whatsapp.com"><img src="/Assets/facebook.png" alt="WhatsApp" class="social-logo"> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+    <p class="footer-credit">© 2024. Kelompok 15</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<script src="script/index.js"></script>
+
+</body>
+</html>

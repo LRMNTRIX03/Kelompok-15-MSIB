@@ -1,0 +1,371 @@
+<!--
+Kelompok 15 Website RPLearn.
+1.Sagita Masayu Kirana (11680192)
+2.Lutfi Rizaldi Mahida (10095609)
+3.Fajar Mahayoga (10254916)
+4.Ditta Adelia (11968377)
+5.Bryan Agung Pratama (10642160)
+6.Alma Alifya Zafira (11615740)
+7.Wahyu Mulia Maharani (10698890)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPLearn - Project-based Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <style>
+    .header {
+             background-color: #001f3f;
+             color: white;
+             padding: 20px;
+             text-align: center;
+         }
+         .header h1 {
+             color: #FFD700;
+         }
+         .search-bar {
+             margin-top: 20px;
+         }
+         .sidebar {
+             border-right: 1px solid #ddd;
+             padding: 20px;
+         }
+         .class-card {
+             margin-bottom: 20px;
+         }
+         .class-card img {
+             height: 200px;
+             object-fit: cover;
+         }
+         .footer {
+             margin-top: 40px;
+             text-align: center;
+             padding: 20px;
+             background-color: #f8f9fa;
+             
+         }
+         .text-danger {
+            color: #ff0000;
+          }
+
+          .card-img-top {
+          width: 100% !important;
+          height: 200px !important;
+          object-fit: cover !important;
+          }
+
+          .judul{
+            color: #0E2F51; 
+            font-size: 20px;
+            font-weight: bold;
+          }
+
+          .judul-kat{
+            font-size: 30px;
+            font-weight: bold;
+          }
+
+   </style>
+
+  <body>
+ <!-- navbar -->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container">
+    <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+      <img
+        src="./Assets/logorpl.222-removebg-preview.png"
+        width="50"
+        height="50"
+        alt="Logo"
+      />
+    </a>
+    <H3 class="mt-2 mx-2">RPLearn</H3>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll d-flex justify-content-center align-items-center" style="--bs-scroll-height: 100px; font-size: 14px; font-weight: 460;">
+        <li class="nav-item dropdown rounded">
+          <a class="nav-link dropdown-toggle text-black px-3 d-flex flex-row align-items-center mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <h5>Program</h5>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/kategori_front.html">Front-End</a></li>
+            <li><a class="dropdown-item" href="/kategori_back.html">Back-End</a></li>
+            <li><a class="dropdown-item" href="#fullstack">Full-Stack</a></li>
+          </ul>
+        </li>
+        <li class="nav-item rounded">
+          <a class="nav-link text-black" href="/detail.html"><h5 class="mt-2">Kegiatanku</h5></a>
+        </li>
+        <li class="nav-item roundeds">
+          <a class="nav-link text-black" href="/about.html"><h5 class="mt-2">Tentang Kami</h5></a>
+        </li>
+      </ul>
+      <div>
+        <a type="button" href="login.html" class="btn rounded px-4" style="color: #0E2F51; border-color: #0E2F51;" id="btn">Login</a>
+        <a type="button" href="register.html" class="btn text-white custom-btn rounded px-4" style="background-color: #0E2F51;" id="btn">Daftar</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+  <div class="offcanvas-header" style="background-color: #0E2F51;">
+    <h5 class="offcanvas-title text-white" id="sidebarLabel">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="background-color: white;"></button>
+  </div>
+  <div class="offcanvas-body" style="background-color: #0E2F51;">
+    <ul class="navbar-nav">
+      <li class="logo mb-3">
+        <img src="./Assets/logorpl.222-removebg-preview.png" alt="Logo" class="img-fluid" width="50px" height="50px">
+      </li>
+      <li class="side-item dropdown rounded">
+        <a class="nav-link dropdown-toggle text-white d-flex flex-row align-items-center mt-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <p>Program</p>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/kategori_front.html">Front-End</a></li>
+          <li><a class="dropdown-item" href="/kategori_back.html">Back-End</a></li>
+          <li><a class="dropdown-item" href="#">Full-Stack</a></li>
+        </ul>
+      </li>
+      <li class="side-item">
+        <a class="nav-link text-white" href="/detail.html"><h5 class="mt-2">Kegiatanku</h5></a>
+      </li>
+      <li class="side-item">
+        <a class="nav-link text-black" href="/about.html"><h5 class="mt-2">Tentang Kami</h5></a>
+      </li>
+      <li class="btn-side">
+        <button class="btn btn-primary w-100 my-2" id="btn-login-s">Login</button>
+        <button class="btn btn-secondary w-100" id="btn-regis-s">Daftar</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="container mt-5 pt-5">
+    <div class="header text-center" style="border-radius: 14px;">
+    <h1 class="judul-kat">Katalog Kelas</h1>
+    <p>Tingkatkan kemampuan digitalmu dengan mengikuti kelas-kelas berbasis industri 
+        <br>yang disediakan oleh REKAPAN, dirancang untuk membekali kamu dengan keterampilan terkini.</p>
+        <center>
+          <div class="input-group" style="width: 30%;">
+            <input id="search-class" class="form-control" placeholder="Cari nama kelas" type="text" />
+            <span class="input-group-text">
+                <i class="fas fa-search"></i>
+          </span>
+        </div>
+        </center>
+</div>
+
+    <div class="row mt-4">
+        <div class="col-md-3" >
+            <h1 class="judul">Kategori Pembelajaran</h1>
+            <ul class="list-unstyled">
+                <li>
+                    <input id="front" type="radio" name="topik" />
+                    <label for="front">Front-End</label>
+                </li>
+                <li>
+                    <input id="back" type="radio" name="topik" />
+                    <label for="back">Back-End</label>
+                </li>
+                <li>
+                    <input id="fullstack" type="radio" name="topik" />
+                    <label for="fullstack">Full-Stack</label>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9" style="border: 1px solid #ddd; border-radius: 8px; background-color: #fff;">
+            <div class="container my-4">
+                <h1 class="judul">Front-End Web Depeloper</h1>
+                <div class="row mt-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="./Assets/htmlper.png" class="card-img-top" alt="kategori Kelas">
+                            <div class="card-body">
+                                <h5 class="card-title">Pengenalan Dasar HTML</h5>
+                                <p class="card-text"><i class="fas fa-file-alt text-primary"></i> 3 Materi</p>
+                                <p class="card-text"><i class="fas fa-star text-warning"></i> 4.6 (6 Ulasan)</p>
+                                <p class="card-text text-red font-weight-bold">Gratis</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-end">
+                                <i class="far fa-heart text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="./Assets/cssper.png" class="card-img-top" alt="kategori Kelas">
+                            <div class="card-body">
+                                <h5 class="card-title">Pengenalan CSS Dasar</h5>
+                                <p class="card-text"><i class="fas fa-file-alt text-primary"></i> 4 Materi</p>
+                                <p class="card-text"><i class="fas fa-star text-warning"></i> 4.6 (6 Ulasan)</p>
+                                <p class="card-text text-red font-weight-bold">Gratis</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-end">
+                                <i class="far fa-heart text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <img src="./Assets/cssper.png" class="card-img-top" alt="kategori Kelas">
+                            <div class="card-body">
+                                <h5 class="card-title">Flexbox dan Grid Layout</h5>
+                                <p class="card-text"><i class="fas fa-file-alt text-primary"></i> 5 Materi</p>
+                                <p class="card-text"><i class="fas fa-star text-warning"></i> 4.6 (6 Ulasan)</p>
+                                <p class="card-text text-red font-weight-bold">Gratis</p>
+                            </div>
+                            <div class="card-footer d-flex justify-content-end">
+                                <i class="far fa-heart text-muted"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                          <img src="./Assets/bootstrap.png" class="card-img-top" alt="kategori Kelas">
+                          <div class="card-body">
+                              <h5 class="card-title">Responsive Web Design</h5>
+                              <p class="card-text"><i class="fas fa-file-alt text-primary"></i> 6 Materi</p>
+                              <p class="card-text"><i class="fas fa-star text-warning"></i> 4.6 (6 Ulasan)</p>
+                              <p class="card-text text-red font-weight-bold">Gratis</p>
+                          </div>
+                          <div class="card-footer d-flex justify-content-end">
+                              <i class="far fa-heart text-muted"></i>
+                          </div>
+                      </div>
+                  </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-md-4 mb-3">
+                      <div class="card">
+                          <img src="./Assets/js.png" class="card-img-top" alt="kategori Kelas">
+                          <div class="card-body">
+                              <h5 class="card-title">JavaScript untuk Front-End </h5>
+                              <p class="card-text"><i class="fas fa-file-alt text-primary"></i> 3 Materi</p>
+                              <p class="card-text"><i class="fas fa-star text-warning"></i> 4.6 (6 Ulasan)</p>
+                              <p class="card-text text-red font-weight-bold">Gratis</p>
+                          </div>
+                          <div class="card-footer d-flex justify-content-end">
+                              <i class="far fa-heart text-muted"></i>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Coba -->
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <img src="./Assets/cssper.png" class="card-img-top" alt="kategori Kelas">
+                <div class="card-body">
+                  <h5 class="card-title">Pengenalan CSS Dasar</h5>
+                  <p class="card-text"><i class="fas fa-file-alt text-primary"></i> 24 Materi</p>
+                  <p class="card-text"><i class="fas fa-star text-warning"></i> 4.6 (6 Ulasan)</p>
+                  <p class="card-text text-red font-weight-bold">Gratis</p>
+                </div>
+                <div class="card-footer d-flex justify-content-end">
+                  <i class="far fa-heart like-btn"></i>
+                 
+                </div>
+              </div>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container my-5">
+    <!-- Kotak Tentang SkillPath -->
+    <div class="info-box p-4" style="border: 1px solid #ddd; border-radius: 8px; background-color: #ffff; width: 100%; margin: 0 auto;">
+    <h2 class="judul" >Tentang SkillPath</h2>
+    <p class="info-content" style="font-size: 16px; color: #333;">
+    Lewat SkillPath kalian bisa mengambil Sertifikasi.<br>
+    Di SkillPath Front-End Web Developer ini, kalian akan diberikan sebuah tugas untuk membuat website sederhana menggunakan HTML, CSS, dan JavaScript dasar.<br>
+    Syarat untuk memulai SkillPath ini adalah kalian harus terlebih dahulu mendaftar dan menyelesaikan kelas HTML, CSS, dan JavaScript dasar.<br>
+    Setelah menyelesaikan SkillPath ini, kalian akan mendapatkan SkilBadge sesuai dengan nilai dari hasil tugas akhir kalian.
+    </p>
+    </div>
+
+    <br>
+
+    <!-- Box 2: Persiapan SkillPath -->
+    <div class="info-box p-4" style="border: 1px solid #ddd; border-radius: 8px; background-color: #ffff; width: 100%; margin: 0 auto;">
+        <h2 class="judul" >Persiapan SkillPath</h2>
+        <ul class="info-content" style="font-size: 16px; color: #333;">
+            <li>Gunakan komputer atau laptop dengan koneksi internet yang stabil.</li>
+            <li>Install browser (disarankan menggunakan Chrome).</li>
+            <li>Mendaftar dan menyelesaikan kelas HTML, CSS, dan JavaScript Dasar.</li>
+        </ul>
+    </div>
+
+  
+
+</div> 
+</div>
+</div>
+
+   
+  <!-- Footer -->
+  <footer class="p-5">
+      <div class="footer-content" style="width: 80%; margin: 0 auto;" >
+        <div class="footer-logo">
+          <img src="./Assets/logorpl.222-removebg-preview.png" alt="RPLearn Logo" />
+          <p></p>
+        </div>
+        <div class="footer-contact">
+          <h3>Kontak</h3>
+          <p>
+            Email:
+            <a
+              style="text-decoration: none; color: #f4f4f5"
+              href="mailto:rplearn@umsida.ac.id"
+              >RPlearn@umsida.ac.id</a
+            >
+          </p>
+          <p>
+            Jl. Raya Gelam No.250, Pagerwaja, Gelam<br />
+            Kec. Candi, Kabupaten Sidoarjo, Jawa Timur 61271
+          </p>
+          <p>Phone: +62 851-7520 2106</p>
+        </div>
+        <div class="footer-follow">
+          <h3>Follow</h3>
+          <div class="social-icons d-flex flex-column">
+            <a href="#" class="text-decoration-none m-2"><i class="fab fa-instagram"></i> RPLearn</a>
+            <a href="#" class="text-decoration-none m-2"><i class="fab fa-youtube"></i> RPLearn</a>
+            <a href="#" class="text-decoration-none m-2"><i class="fab fa-whatsapp"></i> RPLearn</a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-credit" style="margin-left: 50px;">© 2024. Kelompok 15</p>
+  </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="script/kategori.js"></script>
+    <script src="script/index.js"></script>
+
+  </body>
+</html> 
