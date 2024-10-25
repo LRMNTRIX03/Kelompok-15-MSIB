@@ -1,0 +1,306 @@
+:root {
+  --bs-gradient: linear-gradient(to bottom, #8e54e9, #4776e6);
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li a {
+  color: white;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+}
+
+.carousel-caption {
+  bottom: 140px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links,
+  .auth-buttons {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links.active,
+  .auth-buttons.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+  }
+}
+.navbar-transparent {
+  background-color: transparent; /* Remove the !important */
+  width: 100%;
+  z-index: 10;
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+  .carousel-caption {
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+.gradient-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to top, #e4e5e6, #00416a);
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease-in-out infinite;
+  width: 100%;
+
+  position: relative;
+}
+
+/* .gradient-wrapper:nth-child(2) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #e4e5e6, #00416a);
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease-in-out infinite;
+  width: 100%;
+  position: relative;
+} */
+
+#scrollTopBtn {
+  display: none; /* Sembunyikan dulu */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  background-color: #007bff; /* Warna biru untuk tampilan yang lebih menarik */
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 50px; /* Button bulat */
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Shadow untuk menonjolkan tombol */
+  transition: background-color 0.3s ease; /* Efek transisi */
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  color: white;
+  width: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: semi-transparent background for contrast */
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 50% 0%; /* Start at the top */
+  }
+  50% {
+    background-position: 50% 100%; /* Middle (moving down) */
+  }
+  100% {
+    background-position: 50% 0%; /* Return to top */
+  }
+}
+
+.bg-gradient {
+  background-image: var(--bs-gradient) !important;
+  background-size: cover;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  color: #0e2f51;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.hero-image img {
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 10s linear infinite;
+}
+
+.mCard {
+  min-width: 300px;
+  height: 250px;
+  margin-right: 20px;
+  background-color: #0e2f51;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mCard-body {
+  padding: 15px;
+}
+
+.mCard-text {
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  color: white;
+}
+
+.mCard-title {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.card {
+  flex: 0 0 auto; /* Keeps cards from shrinking */
+}
+
+/* Card */
+.category-title {
+  color: #4a148c;
+}
+.category-subtitle {
+  color: #ffb300;
+}
+.btn-custom {
+  background-color: #ffb300;
+  color: white;
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.card-text {
+  font-size: 0.875rem;
+  color: #757575;
+}
+.card-footer {
+  background-color: white;
+  border-top: none;
+}
+.text-red {
+  color: #d32f2f;
+}
+
+.portfolio-img {
+  overflow: hidden;
+}
+.portfolio-img img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+}
+.portfolio-img:hover img {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .portfolio-img img {
+    height: 200px;
+    object-fit: cover;
+  }
+}

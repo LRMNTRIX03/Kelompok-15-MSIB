@@ -1,0 +1,23 @@
+body {
+    background-color: #f9f9f9;
+}
+.card {
+    margin: 20px auto;
+    max-width: 600px;
+}
+.progress {
+    height: 20px;
+}
+.btn-project {
+    width: 30%;
+    margin: 2% 70%;
+}
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.progress-label {
+    margin-left: 10px;
+    font-weight: bold;
+}
