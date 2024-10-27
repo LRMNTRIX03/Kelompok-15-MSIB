@@ -25,14 +25,7 @@ function checkFields() {
     }
 }
 
-// Fungsi untuk toggle visibility password
-document.getElementById('btn-pw').addEventListener('click', function () {
-    const passwordInput = document.getElementById('password');
-    let btn = document.getElementById('btn-pw');
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-    this.textContent = type === 'password' ? btn.innerHTML = 'Show' : btn.innerHTML = 'Hide';
-});
+
 
 // Fungsi untuk remember me
 function rememberMe() {
@@ -81,3 +74,19 @@ document.getElementById('email').addEventListener('input', checkFields);
 document.getElementById('password').addEventListener('input', checkFields);
 document.getElementById('rememberCheck').addEventListener('change', rememberMe);
 document.addEventListener('DOMContentLoaded', autoFillFields); // Jalankan auto-fill saat halaman dimuat
+
+
+// Show hide password
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
+const eyeIcon = document.querySelector('#eyeIcon');
+
+togglePassword.addEventListener('click', function () {
+    // Toggle the type attribute of the password input
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+
+    // Toggle icon between eye and eye-slash
+    eyeIcon.classList.toggle('fa-eye');
+    eyeIcon.classList.toggle('fa-eye-slash');
+});

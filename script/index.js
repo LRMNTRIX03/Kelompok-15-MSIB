@@ -1,3 +1,49 @@
+const portfolioData = [
+  {
+    "id": 1,
+    "image": "/Assets/websites/web1.jpg",
+    "alt": "Portfolio 1"
+  },
+  {
+    "id": 2,
+    "image": "/Assets/websites/web1.jpg",
+    "alt": "Portfolio 2"
+  },
+  {
+    "id": 3,
+    "image": "/Assets/websites/web1.jpg",
+    "alt": "Portfolio 3"
+  }
+];
+
+const testimonials = [
+  {
+    text: "One of the Best customer service & always available when needed. Amazing follow up and great teamwork. Sharp really has transformed the way we look at taking, track, & managing transactions.",
+    name: "Bryan C",
+    rating: 5,
+    img: "../rafiki.jpg"
+  },
+  {
+    text: "Saya sangat terbantu oleh RPLearn karena tidak perlu jalur akademis untuk mendapatkan pekerjaan di bidang IT",
+    name: "Bryan B",
+    rating: 5,
+    img: "../rafiki.jpg"
+  },
+  {
+    text: "Saya diterima kerja di Google setelah belajar disini",
+    name: "Bryan A",
+    rating: 5,
+    img: "../rafiki.jpg"
+  },
+  {
+    text: "Saya menjadi developer di Decacorn setelah lulus tanpa harus meempuh jalur akademis",
+    name: "Bryan A",
+    rating: 5,
+    img: "../rafiki.jpg"
+  },
+];
+
+
 $(document).ready(function () {
   // animasi card hover
   $(".card").hover(
@@ -115,32 +161,74 @@ $(document).ready(function () {
   //   document.querySelector(".marquee-content").style.animationPlayState =
   //     "running";
   // });
-});
-const marquee = document.querySelector(".marquee");
-const marqueeContent = document.querySelector(".marquee-content");
-let isDragging = false;
-let startPos = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
+  const portfolioContainer = document.getElementById('portfolio-container');
 
-function handleMouseMove(e) {
-  if (!isDragging) return;
-  const currentPosition = e.clientX;
-  const diff = currentPosition - startPos;
-  currentTranslate = prevTranslate + diff;
-  marqueeContent.style.transform = `translateX(${currentTranslate}px)`;
-}
+  portfolioData.map(item => {
+    const colDiv = document.createElement('div');
+    colDiv.className = 'col-12 col-sm-6 col-md-4 mb-4';
+  
+    const portfolioImgDiv = document.createElement('div');
+    portfolioImgDiv.className = 'portfolio-img shadow rounded overflow-hidden';
+    portfolioImgDiv.style.aspectRatio = '1';
+  
+    const img = document.createElement('img');
+    img.src = item.image;
+    img.alt = item.alt;
+    img.className = 'img-fluid h-100 w-100';
+  
+    portfolioImgDiv.appendChild(img);
+    colDiv.appendChild(portfolioImgDiv);
+    portfolioContainer.appendChild(colDiv);
+  });
 
-marquee.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  startPos = e.clientX;
-  marquee.classList.add("grabbing");
-});
 
-window.addEventListener("mousemove", handleMouseMove);
+  const marquee = document.querySelector(".marquee");
+  const marqueeContent = document.querySelector(".marquee-content");
+  let isDragging = false;
+  let startPos = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
 
-window.addEventListener("mouseup", () => {
-  isDragging = false;
-  prevTranslate = currentTranslate;
-  marquee.classList.remove("grabbing");
+  function handleMouseMove(e) {
+    if (!isDragging) return;
+    const currentPosition = e.clientX;
+    const diff = currentPosition - startPos;
+    currentTranslate = prevTranslate + diff;
+    marqueeContent.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  marquee.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startPos = e.clientX;
+    marquee.classList.add("grabbing");
+  });
+
+  window.addEventListener("mousemove", handleMouseMove);
+
+  window.addEventListener("mouseup", () => {
+    isDragging = false;
+    prevTranslate = currentTranslate;
+    marquee.classList.remove("grabbing");
+  });
+
+  const container = $('.marquee-content');
+
+  testimonials.map((testimonial) => {
+    const stars = '★'.repeat(testimonial.rating);
+    const cardHtml = `
+      <div class="mCard">
+        <div class="mCard-body text-center">
+          <p class="mCard-text">"${testimonial.text}"</p>
+          <div class="d-flex align-items-center justify-content-center mt-3">
+            <img src="${testimonial.img}" alt="profile" class="rounded-circle" width="50" height="50">
+            <div class="ms-3">
+              <h5 class="mCard-title">${testimonial.name}</h5>
+              <p class="mb-0 text-success">${stars}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    container.append(cardHtml);
+  });
 });
